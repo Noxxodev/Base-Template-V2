@@ -1,0 +1,133 @@
+@import 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap';
+*{margin:0;padding:0;border:0;outline:0;text-decoration:none;line-height:inherit;vertical-align:inherit;}h1,h2,h3,h4,h5,h6{font-weight:normal;}ul{list-style:none;}
+*{font-family: 'Mulish', sans-serif;}
+
+
+body{
+	overflow: hidden;
+}
+.stats {
+	position: absolute;
+	bottom: 2.5vw;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 0.8vw;
+	align-items: center;
+	justify-content: center;
+	transition: left 0.3s ease-in-out;
+}
+.stats .item.weapon{
+	background-color: #5b4c2be0;
+}
+.stats .item.weapon .fill{
+	background-color: #e37b22;
+}
+.stats .item{
+	border-radius: 0.2vw;
+	width: 2.2vw;
+	height: 2.2vw;
+	background-color: #2a313dee;
+    box-shadow: 0px 0px 0.4vw #00000050;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.stats .item p.px{
+	position: absolute;
+	font-weight: 700;
+	color: #fff;
+	font-size: 0.6vw;
+	margin-bottom: -1vw;
+	width: 2.2vw;
+	text-align: center;
+	text-shadow: 0px 0px 6px #00000090;
+}
+.stats .item .fill{
+	border-radius: 0.1vw 0.1vw 0.2vw 0.2vw;
+	position: absolute;
+	width: 2.2vw;
+	height: 0%;
+	background-color: #00d0ff;
+	transition: 0.2s;
+	box-shadow: 0px 0px 1vw #00d0ff50;
+}
+.stats .item svg{
+	width: 50%;
+	fill: white;
+	margin-bottom: 0.55vw;
+	margin-right: 0.55vw;
+	z-index: 1;
+	filter: drop-shadow(0px 0px 4px #00000050);
+}
+.speedometer{
+	display: none;
+}
+.speedometer .speed-items{
+	display: flex;
+	align-items: center;
+	opacity: 0;
+}
+.speedometer .item.speedNum{
+	display: flex;
+	padding: 0px 1vw;
+	justify-content: center;
+	align-items: center;
+	color:#fff;
+	background-color: transparent;
+	box-shadow: none;
+	flex-direction: column;
+}
+.speedometer .item.sItem{
+	background-color: #532828e0;
+}
+.speedometer .item.sItem .fill{
+	background-color: #df4747;
+	box-shadow: 0px 0px 1vw #df474750;
+}
+.speedometer .more-info{
+	position: absolute;
+	bottom: 2.5vw;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 1vw;
+}
+.speedometer .small-item{}
+.speedometer .small-item.blink.act svg{
+	 animation: blinkKf 1s infinite;
+}
+@keyframes blinkKf{
+	0%, 50% {fill: #ffb700;}
+	50.01%, 100% {fill: white;}
+}
+.speedometer .small-item svg{
+	width: 1vw;
+	height: auto;
+	z-index: 1;
+	fill:white;
+	filter: drop-shadow(0px 0px 4px #00000050);
+}
+.speedometer .item p{
+	text-shadow: 0px 0px 6px #00000090;
+	font-weight: 900;
+	font-size: 1.5vw;
+	line-height: 1.5vw;
+}
+.speedometer .item p.px{
+	line-height: normal;
+}
+.speedometer .item span{
+    font-weight: 700;
+    font-size: 0.6vw;
+    text-shadow: 0px 0px 6px #00000090;
+    display: flex;
+}
+.weapon_box.inCar{
+	position: absolute;
+	bottom: 5vw;
+	left: 50%;
+	transform: translateX(-50%);
+	gap: 1vw;
+}
+.weapon_box{display: none}
