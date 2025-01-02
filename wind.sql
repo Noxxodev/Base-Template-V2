@@ -481,7 +481,7 @@ CREATE TABLE `users` (
   `status` longtext DEFAULT NULL,
   `is_dead` tinyint(1) NOT NULL DEFAULT 0,
   `deaths` int(255) NOT NULL DEFAULT 0,
-  `id` int(11) NOT NULL,
+  `id` int(11) DEFAULT NULL,
   `disabled` tinyint(1) DEFAULT 0,
   `last_property` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
