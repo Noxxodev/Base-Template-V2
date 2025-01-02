@@ -2,21 +2,21 @@
  
 Elle contient :
 
-OX : inventory, target, fuel, doorlock, lib, mysql
-Illenium-appearance
-Identité avec OX
-Les scripts ESX de base
-Un job EMS
-Un mapping hôpital + Mapping sur Cayo
-Un HUD avec speedometer
-Un menu admin OX
-Un loading screen
-Une carte colorée sur Los Santos
-Une location de voitures
-Un script pour changer le temps
-Un script pour exécuter des commandes comme : /porter, /id, /me
-Voici une base template que vous pouvez personnaliser à votre guise.
-Support actif sur Discord.
+- OX : inventory, target, fuel, doorlock, lib, mysql
+- Illenium-appearance
+- Identité avec OX
+- Les scripts ESX de base
+- Un job EMS
+- Un mapping hôpital + Mapping sur Cayo
+- Un HUD avec speedometer
+- Un menu admin OX
+- Un loading screen
+- Une carte colorée sur Los Santos
+- Une location de voitures
+- Un script pour changer le temps
+- Un script pour exécuter des commandes comme : /porter, /id, /me
+- Voici une base template que vous pouvez personnaliser à votre guise.
+- Support actif sur Discord.
 
 Bon développement à vous !
 
