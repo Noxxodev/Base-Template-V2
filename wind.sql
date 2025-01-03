@@ -60,7 +60,6 @@ INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
 ('society_ambulance', 'Ambulance', 1),
 ('society_concess', 'Concessionnaire', 2),
 ('society_mecano', 'Mecano', 1),
-('society_ambulance', 'Ambulance', 1);
 
 -- --------------------------------------------------------
 
