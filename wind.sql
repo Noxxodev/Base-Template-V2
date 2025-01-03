@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 03 jan. 2025 à 18:17
+-- Généré le : ven. 03 jan. 2025 à 21:47
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -67,7 +67,7 @@ INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
 --
 
 CREATE TABLE `addon_account_data` (
-  `id` int(11) NOT NULL,
+  `id` int(11) DEFAULT NULL,
   `account_name` varchar(100) DEFAULT NULL,
   `money` int(11) NOT NULL,
   `owner` varchar(46) DEFAULT NULL
@@ -195,7 +195,7 @@ INSERT INTO `datastore` (`name`, `label`, `shared`) VALUES
 --
 
 CREATE TABLE `datastore_data` (
-  `id` int(11) NOT NULL,
+  `id` int(11) DEFAULT NULL,
   `name` varchar(60) NOT NULL,
   `owner` varchar(46) DEFAULT NULL,
   `data` longtext DEFAULT NULL
