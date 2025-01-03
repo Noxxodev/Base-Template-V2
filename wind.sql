@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 31 déc. 2024 à 11:56
+-- Généré le : ven. 03 jan. 2025 à 18:17
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -56,7 +56,6 @@ CREATE TABLE `addon_account` (
 --
 
 INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
-('caution', 'caution', 0),
 ('society_ambulance', 'Ambulance', 1),
 ('society_concess', 'Concessionnaire', 2),
 ('society_mecano', 'Mecano', 1);
@@ -79,9 +78,9 @@ CREATE TABLE `addon_account_data` (
 --
 
 INSERT INTO `addon_account_data` (`id`, `account_name`, `money`, `owner`) VALUES
-(0, 'society_concess', 0, NULL),
 (1, 'society_mecano', 0, NULL),
-(2, 'society_ambulance', 200, NULL);
+(2, 'society_ambulance', 200, NULL),
+(3, 'society_concess', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -207,8 +206,8 @@ CREATE TABLE `datastore_data` (
 --
 
 INSERT INTO `datastore_data` (`id`, `name`, `owner`, `data`) VALUES
-(0, 'property', 'null', '{}'),
-(1, 'society_ambulance', NULL, '\'{}\'');
+(1, 'society_ambulance', NULL, '\'{}\''),
+(2, 'property', 'null', '{}');
 
 -- --------------------------------------------------------
 
@@ -512,6 +511,24 @@ ALTER TABLE `account_info`
   ADD PRIMARY KEY (`license`);
 
 --
+-- Index pour la table `addon_account`
+--
+ALTER TABLE `addon_account`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Index pour la table `addon_account_data`
+--
+ALTER TABLE `addon_account_data`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Index pour la table `addon_inventory`
+--
+ALTER TABLE `addon_inventory`
+  ADD UNIQUE KEY `name` (`name`);
+
+--
 -- Index pour la table `angelicxs_billing`
 --
 ALTER TABLE `angelicxs_billing`
@@ -528,6 +545,18 @@ ALTER TABLE `banking`
 --
 ALTER TABLE `banlist`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `datastore`
+--
+ALTER TABLE `datastore`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Index pour la table `datastore_data`
+--
+ALTER TABLE `datastore_data`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Index pour la table `items`
