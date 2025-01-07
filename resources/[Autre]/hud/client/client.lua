@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
                 if GetPedInVehicleSeat(vehicle, -1) == player then
                     wait = 200
                     inCar = true
-                    local fuel = GetVehicleFuelLevel(vehicle)
+                    local fuel = Entity(vehicle).state.fuel
                     local speed = GetEntitySpeed(vehicle)
                     if not is_mph then
                         speed = speed*3.6
