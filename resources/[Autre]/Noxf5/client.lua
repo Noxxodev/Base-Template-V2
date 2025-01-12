@@ -41,7 +41,15 @@ lib.registerContext({
             description = 'Carte d\'identité',
             icon = 'fa-solid fa-address-card',
             onSelect = function()
-                TriggerEvent('jsfour-idcard:openuseid', GetPlayerServerId(NetworkGetPlayerIndexFromPed()))
+                local player, distance = ESX.Game.GetClosestPlayer()
+
+                if distance ~= -1 and distance <= 3.0 then
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player))
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()))
+                else
+                    TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()))
+                  ESX.ShowNotification('Aucun joueur a proximité')
+                end  
             end,
         },
         {
@@ -49,7 +57,15 @@ lib.registerContext({
             description = 'Permis de conduire',
             icon = 'fa-solid fa-address-card',
             onSelect = function()
-                TriggerEvent('jsfour-idcard:openusedriver', GetPlayerServerId(NetworkGetPlayerIndexFromPed()))
+                local player, distance = ESX.Game.GetClosestPlayer()
+
+                if distance ~= -1 and distance <= 3.0 then
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player), 'driver')
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()), 'driver')
+                else
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()), 'driver')
+                  ESX.ShowNotification('Aucun joueur a proximité')
+                end
             end,
         },
         {
@@ -57,7 +73,15 @@ lib.registerContext({
             description = 'Permis port d\'armes',
             icon = 'fa-solid fa-address-card',
             onSelect = function()
-                TriggerEvent('jsfour-idcard:openuseweapon', GetPlayerServerId(NetworkGetPlayerIndexFromPed()))
+                local player, distance = ESX.Game.GetClosestPlayer()
+
+                if distance ~= -1 and distance <= 3.0 then
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player), 'weapon')
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()), 'weapon')
+                else
+                  TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(PlayerId()), 'weapon')
+                  ESX.ShowNotification('Aucun joueur a proximité')
+                end
             end,
         },
     }
